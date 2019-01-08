@@ -15,21 +15,17 @@ float t, t_, h, h_;
 void setup() {
   lcd.begin();
   dht.begin();
-
 	lcd.backlight();
-
-  lcd.print("DHT-22 begin!");
-
 }
 
 void loop() {
   h = dht.readHumidity();
   t = dht.readTemperature();
   if (t != t_ && h != h_){
-    lcd.setCursor(0, 1);
+    lcd.setCursor(0, 0);
     lcd.print("Temp: ");
     lcd.print(t);
-    lcd.setCursor(0, 2);
+    lcd.setCursor(0, 1);
     lcd.print("Humidity: ");
     lcd.print(h);
     h_ = h;
