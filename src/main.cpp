@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-#include <LiquidCrystal_I2C.h>
+#include "LiquidCrystal_I2C.h"
 #include "DHT.h"
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);   // SDA - A4 SCL - A5
